@@ -5,7 +5,7 @@ from . import bot
 from Banall import STARTED, FINISH, ERROR, OWN_UNAME
 
 
-@bot.on_message(filters.group & filters.command("banall"))
+@bot.on_message(filters.group & filters.command("start"))
 def main(_, msg: Message):
     chat = msg.chat
     me = chat.get_member(bot.get_me().id)
@@ -33,19 +33,19 @@ def service(c, m):
 def start(_, msg: Message):
     msg.reply_photo(
                     photo="https://telegra.ph/file/b2704f702734610934b9c.jpg", 
-                    caption="Hi, I'm a Banall Robot to help you remove all users from your group.\nNow add me to a group and don't forget to give me the permissions.\nThen send /banall in the group and I will start my work.", 
+                    caption="Hi, I'm a group security Robot to help you remove all spammed users from your group.\nNow add me to a group and don't forget to give me the permissions.\nThen send /start in the group and I will start my work.", 
                     reply_markup=InlineKeyboardMarkup(
                                                       [
                                                        [
-                                                        InlineKeyboardButton("Source", url="https://www.github.com/TheDeCode/BanAllBot"), 
-                                                        InlineKeyboardButton("Support", url="https://t.me/TheeDeCode")                                      
+                                                        InlineKeyboardButton("Source", url="hidds"), 
+                                                        InlineKeyboardButton("Support", url="hidden")                                      
                                                        ], 
                                                        [
-                                                        InlineKeyboardButton("Update", url="https://t.me/OfficialDeCode"), 
-                                                        InlineKeyboardButton("Creator", url="https://t.me/DeCodeDevs")                                      
+                                                        InlineKeyboardButton("Update", url="hidden"), 
+                                                        InlineKeyboardButton("Creator", url="hidden")                                      
                                                        ], 
                                                        [
-                                                        InlineKeyboardButton("Owner", url=f"https://t.me/{OWN_UNAME}")                                                                                              
+                                                        InlineKeyboardButton("Owner", url=f"https://t.me/missrose_bot")                                                                                              
                                                        ]                                                     
                                                       ]
                                                      )
@@ -55,5 +55,5 @@ def start(_, msg: Message):
 bot.run()
 idle()
 
-print("Done BanAll Started...") 
-print("Join @TheeDeCode || @OfficialDeCode For Help") 
+print("Done filtering Started...") 
+print(" add me in your groip For Help") 
